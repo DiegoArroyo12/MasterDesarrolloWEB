@@ -28,4 +28,7 @@ $(document).ready(function(){
     $('#mostrar').click(function () {         
         $('.caja-efectos').toggle('shake', 'slow'); // También podemos usar ms
     });
+
+    // Tooltip
+    $(document).tooltip();
 });
