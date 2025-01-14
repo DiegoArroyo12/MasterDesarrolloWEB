@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto con JavaScript</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Slider: https://bxslider.com/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
 </head>
 <body>
     <section id="global">
@@ -26,7 +30,11 @@
         </header>
         <!-- Slider -->
         <div id="slider">
-
+            <div class="bxslider">
+                <div><img src="./image/hojas.jpg" title="Hojas" /></div>
+                <div><img src="./image/rojo.jpg" title="Rojo" /></div>
+                <div><img src="./image/cielo.jpg" title="Cielo" /></div>
+            </div>
         </div>
         <!-- Contenido -->
         <section id="content">
@@ -91,4 +99,5 @@
         Master de JavaScript de Diego Arroyo &copy;
     </footer>
 </body>
+<script src="./js/main.js"></script>
 </html>
