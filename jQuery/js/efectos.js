@@ -3,6 +3,7 @@ $(document).ready(function(){
     var mostrar = $('#mostrar');
     var ocultar = $('#ocultar');
     var abrir = $('#todoenuno');
+    var animame = $('#animame');
 
     mostrar.hide();
 
@@ -28,5 +29,25 @@ $(document).ready(function(){
         caja.fadeToggle('fast');
         caja.slideToggle('fast'); // Desplegable
         caja.slideUp('fast');        
+    });
+
+    animame.click(function() { 
+        caja.animate({
+                marginLeft: '500px',
+                fontSize: '40px',
+                height: '100px'
+            }, 'slow')
+            .animate({
+                borderRadius: '900px',
+                marginTop: '80px',
+            }, 'slow')
+            .animate({
+                borderRadius: '0px',
+                marginLeft: '0px'
+            }, 'slow')
+            .animate({
+                borderRadius: '900px',
+                marginTop: '0px',
+            }, 'slow');
     });
 });
