@@ -18,7 +18,9 @@ $(document).ready(function(){
     ocultar.click(function (e) {
         $(this).hide();
         mostrar.show();
-        caja.hide('fast'); // normal
+        caja.hide('fast', function() { // normal, fast, slow
+            console.log('Oculto')       // Segundo parámetro es un callback
+         });
         caja.fadeOut('slow');
         caja.fadeTo('slow', 0);
         caja.slideDown('fast');
