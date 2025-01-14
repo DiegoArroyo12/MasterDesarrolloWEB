@@ -107,3 +107,49 @@ body {
     width: 70px;
     margin-bottom: 20px;
 }
+
+#sidebar {
+    font-family: Helvetica, Arial;
+    width: 31%;
+    float: right;
+}
+
+#sidebar h4 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 10px;
+    color: #333;
+    background: url(../image/lines.png) repeat-x;
+}
+
+#sidebar h4 span {
+    background: white;
+    padding: 5px;
+}
+
+#sidebar img {
+    width: 100%;
+}
+
+#sidebar p {
+    font-size: 15px;
+    text-align: justify;
+}
+
+form input:not([type="submit"]) {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+form input[type='submit'] {
+    background-color: #ccc;
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+}
