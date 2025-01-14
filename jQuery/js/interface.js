@@ -23,4 +23,9 @@ $(document).ready(function(){
             console.log('Has soltado algo dentro de el área.');
         }
     });
+
+    // Efectos
+    $('#mostrar').click(function () {         
+        $('.caja-efectos').toggle('shake', 'slow'); // También podemos usar ms
+    });
 });
