@@ -15,19 +15,45 @@ $(document).ready(function(){
     //         });
     // });
 
+    // formulario.submit(function (e) { 
+    //     e.preventDefault(); // Para no ser redirijidos
+    //     var usuario = {
+    //         'name': $('input[name="name"]').val(),
+    //         'edad': $('input[name="age"]').val()
+    //     }
+    //     console.log(usuario);
+    //     $.post($(this).attr('action'), usuario,
+    //         function (response, textStatus, jqXHR) {
+    //             console.log(response)
+    //     }).done(function() { 
+    //         alert('Usuario añadido correctamente');
+    //      });
+    //     return false;
+    // });
+
+    // ajax
     formulario.submit(function (e) { 
-        e.preventDefault(); // Para no ser redirijidos
+        e.preventDefault();
+
         var usuario = {
-            'name': $('input[name="name"]').val(),
-            'edad': $('input[name="age"]').val()
+        'name': $('input[name="name"]').val(),
+        'edad': $('input[name="age"]').val()
         }
-        console.log(usuario);
-        $.post($(this).attr('action'), usuario,
-            function (response, textStatus, jqXHR) {
-                console.log(response)
-        }).done(function() { 
-            alert('Usuario añadido correctamente');
-         });
-        return false;
+
+        $.ajax({
+            type: "post",
+            url: $(this).attr('action'),
+            data: usuario,
+            beforeSend: function() {
+                console.log('Enviando Usuario');
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            error: function() {
+                console.log('Ocurrió un error');
+            },
+            timeout: 20000
+        }); 
     });
 });
