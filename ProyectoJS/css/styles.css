@@ -127,7 +127,8 @@ h2 {
     text-align: justify;
 }
 
-form input:not([type="submit"]) {
+form input:not([type="submit"]),
+select {
     padding: 5px;
     border-radius: 2px;
     border: 1px solid #ccc;
@@ -137,7 +138,7 @@ form input:not([type="submit"]) {
 }
 
 form input[type='submit'] {
-    background-color: #ccc;
+    background-color: #eee;
     padding: 10px;
     border: 1px solid #ccc;
     color: #333;
@@ -220,4 +221,25 @@ footer {
     width: 30%;
     padding: 30px;
     margin: 0 auto;
+}
+
+#form_contact {
+    width: 60%;
+    margin-top: 15px;
+    font-family: Helvetica, Arial;
+}
+
+#form_contact label {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.form-error {
+    float: right;
+    font-size: 11px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    width: 65%;
 }
