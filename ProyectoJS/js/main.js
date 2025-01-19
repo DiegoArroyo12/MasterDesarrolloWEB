@@ -1,11 +1,13 @@
 $(document).ready(function(){
 
   // Slider
-  $('.bxslider').bxSlider({
+  if (window.location.href.indexOf('index') > -1) {
+    $('.bxslider').bxSlider({
       mode: 'fade',
       captions: true,
       slideWidth: 1200
-  });
+    });
+  }
 
   // Posts
   const date = new Date();
@@ -95,5 +97,9 @@ $(document).ready(function(){
       localStorage.clear();
       location.reload();
     });
+  }
+
+  if (window.location.href.indexOf('about') > -1) {
+    $('#acordeon').accordion();
   }
 });

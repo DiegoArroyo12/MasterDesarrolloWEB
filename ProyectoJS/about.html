@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto con JavaScript</title>
+    <title>Sobre mí</title>
     <link rel="stylesheet" href="css/styles.css">
     <link id="theme" rel="stylesheet" href="css/green.css">
-    <!-- Slider: https://bxslider.com/ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="js/jquery-ui-1.14.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.14.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+    <script src="js/jquery-ui-1.14.1/jquery-ui.min.js"></script>
 </head>
 <body>
     <div id="selector-theme">
@@ -35,18 +39,40 @@
                 </ul>
             </nav>
         </header>
-        <!-- Slider -->
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="./image/hojas.jpg" title="Hojas" /></div>
-                <div><img src="./image/rojo.jpg" title="Rojo" /></div>
-                <div><img src="./image/cielo.jpg" title="Cielo" /></div>
-            </div>
-        </div>
         <!-- Contenido -->
         <section id="content">
-            <div id="posts">
-                <!-- Cargar posts desde json -->
+            <div id="box">
+                <!-- Cargar Acordeón -->
+                <h2>Sobre Mi</h2>
+                <div id="acordeon">
+                    <h3>¿Quienes Somos?</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Totam neque nesciunt suscipit? Inventore architecto 
+                            voluptate sequi alias, nulla quia ipsa sed! Voluptatem 
+                            illum in inventore animi nesciunt culpa distinctio placeat!
+                        </p>
+                    </div>
+                    <h3>Nuestros Servicios</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Totam neque nesciunt suscipit? Inventore architecto 
+                            voluptate sequi alias, nulla quia ipsa sed! Voluptatem 
+                            illum in inventore animi nesciunt culpa distinctio placeat!
+                        </p>
+                    </div>
+                    <h3>Nuestros Clientes</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Totam neque nesciunt suscipit? Inventore architecto 
+                            voluptate sequi alias, nulla quia ipsa sed! Voluptatem 
+                            illum in inventore animi nesciunt culpa distinctio placeat!
+                        </p>
+                    </div>
+                </div>
             </div>
             <aside id="sidebar">
                 <div id="about">
@@ -80,5 +106,5 @@
         <a href="#" class="subir">Ir al Inicio</a>
     </footer>
 </body>
-<script src="./js/main.js"></script>
+<script src="js/main.js"></script>
 </html>
