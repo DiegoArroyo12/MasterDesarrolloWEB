@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto con JavaScript</title>
+    <title>Sobre mí</title>
     <link rel="stylesheet" href="css/styles.css">
     <link id="theme" rel="stylesheet" href="css/green.css">
-    <!-- Slider: https://bxslider.com/ -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+    <!-- MomentJS -->
+     <script src="js/moment.js"></script>
 </head>
 <body>
     <div id="selector-theme">
@@ -34,18 +33,12 @@
                 </ul>
             </nav>
         </header>
-        <!-- Slider -->
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="./image/hojas.jpg" title="Hojas" /></div>
-                <div><img src="./image/rojo.jpg" title="Rojo" /></div>
-                <div><img src="./image/cielo.jpg" title="Cielo" /></div>
-            </div>
-        </div>
         <!-- Contenido -->
         <section id="content">
-            <div id="posts">
-                <!-- Cargar posts desde json -->
+            <div id="box">
+                <!-- Cargar Un Reloj -->
+                <div id="reloj"></div>
+                </div>
             </div>
             <aside id="sidebar">
                 <div id="about">
@@ -79,5 +72,5 @@
         <a href="#" class="subir">Ir al Inicio</a>
     </footer>
 </body>
-<script src="./js/main.js"></script>
+<script src="js/main.js"></script>
 </html>
