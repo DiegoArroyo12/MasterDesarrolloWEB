@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideoJuegoComponent } from './videojuego/videojuego.component';
+import { ZapatosComponent } from "./zapatos/zapatos.component";
 
 @NgModule({
   declarations: [
@@ -12,8 +13,9 @@ import { VideoJuegoComponent } from './videojuego/videojuego.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    VideoJuegoComponent
-  ],
+    VideoJuegoComponent,
+    ZapatosComponent
+],
   providers: [],
   bootstrap: [AppComponent]
 })
