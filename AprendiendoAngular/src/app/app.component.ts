@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Diego Arroyo';
+  public mostrarVideojuegos: boolean = true;
+
+  ocultarVideoJuegos(value: boolean){
+    this.mostrarVideojuegos = value;
+  }
 }
