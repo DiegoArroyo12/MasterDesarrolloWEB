@@ -1,6 +1,4 @@
 <h2>{{titulo}}</h2>
 <ul>
-    <li>Reebok</li>
-    <li>Nike</li>
-    <li>Adidas</li>
+    <li *ngFor="let deportiva of zapatos">{{deportiva.nombre}} - <strong>{{deportiva.precio}}</strong></li>
 </ul>
