@@ -1,4 +1,31 @@
 <h2>{{titulo}}</h2>
+<p>Compra los zapatos de las mejores marcas</p>
 <ul>
-    <li *ngFor="let deportiva of zapatos">{{deportiva.nombre}} - <strong>{{deportiva.precio}}</strong></li>
+    <li *ngFor="let marca of marcas">{{marca}}</li>
+</ul>
+<p>Las deportivas que tenemos disponibles son las siguientes:</p>
+<ul>
+    <li *ngFor="let deportiva of zapatos">
+        <span [ngStyle]="{
+            'text-decoration': !deportiva.stock ? 'line-through' : 'none'
+        }">{{deportiva.nombre}} - <strong>${{deportiva.precio}} </strong></span>
+
+        <span *ngIf="deportiva.precio <= 2000" 
+        [style.background]="deportiva.precio < 2500 ? 'green' : 'transparent'"
+        [style.color]="deportiva.precio < 2500 ? 'white' : 'black'"
+        >¡EN OFERTA! </span>
+    </li>
+</ul>
+
+<p>El color de la mayoría de nuestros zapatos es:</p>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'yellow'">
+        El color predominante es el <span style="background: yellow;">amarillo</span>.
+    </li>
+    <li *ngSwitchCase="'red'">
+        El color predominante es el rojo.
+    </li>
+    <li *ngSwitchCase="'blue'">
+        El color predominante es el azul.
+    </li>
 </ul>
