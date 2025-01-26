@@ -1,19 +1,22 @@
 import { Component, OnInit } from "@angular/core";
 import { Zapato } from "../models/zapato";
 import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
 @Component({
     selector: 'zapatos',
     templateUrl: './zapatos.component.html',
-    imports: [CommonModule]
+    imports: [CommonModule, FormsModule]
 })
 export class ZapatosComponent implements OnInit {
     public titulo: string = 'Componente de zapatos';
     public zapatos: Array<Zapato>;
     public marcas: String[];
     public color: string;
+    public miMarca: string;
 
     constructor(){
+        this.miMarca = 'Fila';
         this.color = 'yellow';
         this.marcas = new Array;
         this.zapatos = [
@@ -36,5 +39,13 @@ export class ZapatosComponent implements OnInit {
             }
         });
         console.log(this.marcas);
+    }
+
+    getMarca() {
+        alert(this.miMarca)
+    }
+
+    addMarca() {
+        this.marcas.push(this.miMarca);
     }
 }
