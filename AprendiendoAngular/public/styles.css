@@ -10,3 +10,7 @@
 .subrayado {
     text-decoration: line-through;
 }
+
+.active {
+    border: 3px solid yellow;
+}
