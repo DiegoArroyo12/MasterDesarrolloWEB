@@ -7,6 +7,16 @@
   <h1>Bienvenido {{title}}</h1>
   <p>{{descripcion}}</p>
 
+  <nav>
+    <a [routerLink]="['/']">Home</a>
+    &nbsp;
+    <a [routerLink]="['/zapatos']">Zapatos</a>
+    &nbsp;
+    <a [routerLink]="['/cursos']">Cursos</a>
+    &nbsp;
+    <a [routerLink]="['/videojuego']">VideoJuego</a>
+  </nav>
+
   <!-- <button (click)="ocultarVideoJuegos(false)" *ngIf="mostrarVideojuegos">Ocultar</button>
   <button (click)="ocultarVideoJuegos(true)" *ngIf="!mostrarVideojuegos">Mostrar</button>
 
