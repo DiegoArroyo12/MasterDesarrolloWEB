@@ -23,7 +23,14 @@ export class CursosComponent {
       this.nombre = params['nombre'];
       this.apellido = params['apellido'];
       //this.followers = params['followers']; El '+' es para convertirlo a number
-      console.log(this.nombre);
+      
+      if(this.nombre == 'ninguno'){
+        this._router.navigate(['/home']);
+      }
     });
+  }
+
+  redirigir(){
+    this._router.navigate(['/zapatos']);
   }
 }
