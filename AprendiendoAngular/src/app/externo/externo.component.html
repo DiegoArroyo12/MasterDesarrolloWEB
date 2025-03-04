@@ -5,6 +5,9 @@
 {{ 'HOLA MUNDO USANDO PIPES' | lowercase}}
 <hr>
 
+{{ 10 | calculadora: 2}}
+<hr>
+
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()">
 
 <div *ngIf="!user">Cargando...</div>

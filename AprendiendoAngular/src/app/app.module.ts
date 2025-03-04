@@ -11,12 +11,14 @@ import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
 
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     CursosComponent,
     HomeComponent,
-    ExternoComponent
+    ExternoComponent, 
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { ExternoComponent } from './externo/externo.component';
     VideoJuegoComponent,
     ZapatosComponent,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CalculadoraPipe
 ],
   providers: [],
   bootstrap: [AppComponent]
