@@ -1,0 +1,18 @@
+<h2>Contacto</h2>
+
+<!-- Los elementos con un gato son nombres almacenados para poder acceder en el componente -->
+<form #formContacto="ngForm" (ngSubmit)="onSubmit()"> 
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre">
+
+    <label for="apellidos">Apellidos</label>
+    <input type="text" name="apellidos" #apellidos="ngModel" [(ngModel)]="usuario.apellidos">
+
+    <label for="email">Email</label>
+    <input type="email" name="email" #email="ngModel" [(ngModel)]="usuario.mail">
+
+    <label for="mensaje">Mensaje</label>
+    <textarea name="mensaje" id="mensaje" #mensaje="ngModel" [(ngModel)]="usuario.mensaje"></textarea>
+
+    <input type="submit" value="Enviar">
+</form>
