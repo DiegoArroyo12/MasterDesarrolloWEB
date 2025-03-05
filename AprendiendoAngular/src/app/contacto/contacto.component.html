@@ -1,18 +1,25 @@
 <h2>Contacto</h2>
 
 <!-- Los elementos con un gato son nombres almacenados para poder acceder en el componente -->
-<form #formContacto="ngForm" (ngSubmit)="onSubmit()"> 
+<form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)"> 
     <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre">
+    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" required pattern="[a-zA-Z]+">
+    <!-- Esto es que si se toca el input y se sale sin que sea válido el contenido, muestre el span -->
+    <span *ngIf="nombre.touched && !nombre.valid">El nombre es obligatorio</span>
 
     <label for="apellidos">Apellidos</label>
-    <input type="text" name="apellidos" #apellidos="ngModel" [(ngModel)]="usuario.apellidos">
+    <input type="text" name="apellidos" #apellidos="ngModel" [(ngModel)]="usuario.apellidos" required pattern="[a-zA-Z]+">
+    <!-- pattern es para asignar los valores válidos dentro de este campo -->
+    <span *ngIf="apellidos.touched && !apellidos.valid">El apellido es obligatorio</span>
 
     <label for="email">Email</label>
-    <input type="email" name="email" #email="ngModel" [(ngModel)]="usuario.mail">
+    <input type="email" name="email" #email="ngModel" [(ngModel)]="usuario.mail" required>
+    <span *ngIf="email.touched && !email.valid">El email es obligatorio</span>
 
     <label for="mensaje">Mensaje</label>
-    <textarea name="mensaje" id="mensaje" #mensaje="ngModel" [(ngModel)]="usuario.mensaje"></textarea>
+    <textarea name="mensaje" id="mensaje" #mensaje="ngModel" [(ngModel)]="usuario.mensaje" required></textarea>
+    <span *ngIf="mensaje.touched && !mensaje.valid">El mensaje es obligatorio</span>
 
-    <input type="submit" value="Enviar">
+    <!-- El botón se deshabilita si el formulario no es válido -->
+    <input type="submit" value="Enviar" [disabled]="!formContacto.form.valid">
 </form>
