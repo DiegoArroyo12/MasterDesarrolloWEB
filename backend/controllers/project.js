@@ -82,6 +82,20 @@ var controller = {
             .catch((err) => {
                 return res.status(500).send({ message: 'Error al actualizar.' });
             });
+    },
+    deleteProject: function(req, res) {
+        var projectId = req.params.id;
+
+        Project.findByIdAndRemove(projectId)
+            .then((projectDelete) => {
+                if (!projectDelete) {
+                    return res.status(404).send({ message: 'No existe el proyecto a eliminar.' });
+                }
+                return res.status(200).send({ projectDelete });
+            })
+            .catch((err) => {
+                return res.status(500).send({ message: 'No se ha podido borrar el proyecto' });
+            })
     }
 }
 
