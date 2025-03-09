@@ -55,6 +55,18 @@ var controller = {
             .catch((err) => {
                 return res.status(500).send({ message: 'Error al devolver los datos.' });
             });
+    },
+    getProjects: function(req, res) {
+        Project.find().sort('-year') // Acomoda por el año
+            .then((projects) => {
+                if (!projects) {
+                    return res.status(404).send({ message: 'No se encontraron proyectos.' });
+                }
+                return res.status(200).send({projects})
+            })
+            .catch((err) => {
+                return res.status(500).send({ message: 'Error al devolver los proyectos.' });
+            });
     }
 }
 
