@@ -96,6 +96,27 @@ var controller = {
             .catch((err) => {
                 return res.status(500).send({ message: 'No se ha podido borrar el proyecto' });
             })
+    },
+    uploadImage: function(req, res) {
+        var projectId = req.params.id;
+        var filename = "Imagen no subida...";
+
+        if (req.files) {
+            var filePath = req.files.image.path;
+            var fileSplit = filePath.split('/');
+            var filename = fileSplit[1];
+
+            Project.findByIdAndUpdate(projectId, {image: filename}, {new: true})
+                .then((projectUpdate) => {
+                    if (!projectUpdate) {
+                        return res.status(404).send({ message: 'No existe el proyecto para actualizar.' });
+                    }
+                    return res.status(200).send({ project: projectUpdate });
+                })
+                .catch((err) => {
+                    return res.status(500).send({ message: 'No se ha podido actualizar el proyecto' }); 
+                });
+        }
     }
 }
 
