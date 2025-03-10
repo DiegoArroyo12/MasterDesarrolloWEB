@@ -1,3 +1,4 @@
+/* Importar Fuentes */
 @font-face {
     font-family: "yanone";
     src: url("../public/fonts/yanone.ttf");
@@ -8,6 +9,15 @@
     src: url("../public/fonts/finger.ttf");
 }
 
+/* Generales */
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: "yanone", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    background: url("../public/img/pattern.png");
+    position: fixed;
 }
