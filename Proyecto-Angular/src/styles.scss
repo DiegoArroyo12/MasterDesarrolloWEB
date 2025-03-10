@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "yanone";
+    src: url("../public/fonts/yanone.ttf");
+}
+
+@font-face {
+    font-family: "finger";
+    src: url("../public/fonts/finger.ttf");
+}
+
+body {
+    font-family: "yanone", Arial, Helvetica, sans-serif;
+}
