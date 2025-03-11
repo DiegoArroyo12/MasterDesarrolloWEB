@@ -21,3 +21,49 @@ body {
     background: url("../public/img/pattern.png");
     position: fixed;
 }
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+/* Barra de Navegación */
+header {
+    width: 100%;
+    height: 9rem;
+    background: rgba(53, 103, 164, $alpha: 0.8);
+    position: fixed;
+    text-transform: uppercase;
+}
+
+header ul {
+    display: block;
+    width: 58%;
+    height: inherit;
+    margin: 0 auto;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 9rem;
+}
+
+header a {
+    display: block;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+
+header a:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+header #logo a:hover {
+    background: transparent;
+}
