@@ -41,6 +41,7 @@ header ul {
     width: 58%;
     height: inherit;
     margin: 0 auto;
+    margin-top: -3px;
 }
 
 header ul li {
@@ -64,6 +65,18 @@ header a:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
-header #logo a:hover {
+/* Logotipo */
+#logo {
+    font-family: "finger";
+    font-size: 3rem;
+}
+
+#logo a {
+    transition: color 500ms, transform 500ms;
+}
+
+#logo a:hover {
     background: transparent;
+    color: black;
+    transform: scale(1.50, 1.50);
 }
