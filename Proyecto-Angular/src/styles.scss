@@ -99,3 +99,45 @@ footer {
     padding-top: 1.5rem;
     color: rgba(0, 0, 0, 0.5);
 }
+
+/* Sobre Mí */
+.title {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+}
+
+.title h1 {
+    font-family: "finger";
+    font-size: 6rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.title h2 {
+    font-size: 2.5rem;
+    color: gray;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+article.about {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    font-size: 23px;
+}
+
+.about h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.about p {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: justify;
+}
