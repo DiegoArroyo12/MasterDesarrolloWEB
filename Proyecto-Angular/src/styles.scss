@@ -156,7 +156,7 @@ article.about {
 }
 
 form {
-    width: 50%;
+    width: 80%;
 }
 
 form label {
@@ -170,7 +170,7 @@ form input[type="text"],
 form input[type="number"],
 form input[type="email"],
 form textarea {
-    width: 80%;
+    width: 40%;
     padding: 5px;
 }
 
@@ -188,4 +188,17 @@ form input[type="submit"] {
 form button:hover, 
 form input[type="submit"]:hover {
     background: rgba(53, 103, 163, 0.8);
+}
+
+form input[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.form_error {
+    font-size: 1.3rem;
+    padding: 3px;
+    background: red;
+    color: white;
+    margin-left: 5px;
 }
