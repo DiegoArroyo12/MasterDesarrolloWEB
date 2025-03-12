@@ -141,3 +141,51 @@ article.about {
     padding-bottom: 30px;
     text-align: justify;
 }
+
+/* Sección Con Formulario */
+.container {
+    padding: 5rem;
+    padding-top: 2rem;
+}
+
+.container h2 {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    width: 50%;
+}
+
+form label {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+    width: 80%;
+    padding: 5px;
+}
+
+form button, 
+form input[type="submit"] {
+    display: block;
+    font-size: 1.7rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    color: white;
+    background: rgba(53, 103, 163, 1);
+    border: 1px solid rgba(13, 67, 133, 1);
+}
+
+form button:hover, 
+form input[type="submit"]:hover {
+    background: rgba(53, 103, 163, 0.8);
+}
