@@ -3,6 +3,8 @@ import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models/project';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UploadService } from '../../services/upload.service';
+import { global } from '../../services/global'
 
 
 @Component({
@@ -10,27 +12,34 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [FormsModule, HttpClientModule],
   templateUrl: './create.component.html',
   styleUrl: './create.component.scss',
-  providers: [ProjectService]
+  providers: [ProjectService, UploadService]
 })
 export class CreateComponent {
   public title: string;
   public project: Project;
   public status: string = '';
+  public filesToUpload: Array<File> = new Array<File>;
 
   constructor(
-    private _projectService: ProjectService
+    private _projectService: ProjectService,
+    private _uploadService: UploadService
   ){
     this.title = "Crear Proyecto"
     this.project = new Project('','','','', 2025,'','')
   }
 
   onSubmit(form: any){
-    console.log(this.project);
+    // Guardar datos básicos
     this._projectService.saveProject(this.project).subscribe(
       response => {
         if(response.project){
-          this.status = 'success';
-          form.reset();
+          // Subir Imagen
+          this._uploadService.makeFileRequest(global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image')
+          .then((result: any) => {
+              this.status = 'success';
+              console.log()
+              form.reset();
+            })
         } else {
           this.status = 'failed';
         }
@@ -39,5 +48,9 @@ export class CreateComponent {
         console.log(<any> error);
       }
     )
+  }
+
+  fileChangeEvent(fileInput: any) {
+    this.filesToUpload = <Array<File>>fileInput.target.files;
   }
 }
