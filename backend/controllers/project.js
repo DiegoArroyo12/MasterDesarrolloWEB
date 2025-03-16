@@ -88,7 +88,7 @@ var controller = {
     deleteProject: function(req, res) {
         var projectId = req.params.id;
 
-        Project.findByIdAndRemove(projectId)
+        Project.findByIdAndDelete(projectId)
             .then((projectDelete) => {
                 if (!projectDelete) {
                     return res.status(404).send({ message: 'No existe el proyecto a eliminar.' });
