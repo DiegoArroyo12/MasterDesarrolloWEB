@@ -3,10 +3,11 @@ import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { global } from '../../services/global'
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
-  imports: [HttpClientModule],
+  imports: [HttpClientModule, RouterModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
   providers: [ProjectService]

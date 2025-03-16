@@ -5,11 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UploadService } from '../../services/upload.service';
 import { global } from '../../services/global'
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-create',
-  imports: [FormsModule, HttpClientModule],
+  imports: [FormsModule, HttpClientModule, RouterModule],
   templateUrl: './create.component.html',
   styleUrl: './create.component.scss',
   providers: [ProjectService, UploadService]
@@ -17,6 +18,7 @@ import { global } from '../../services/global'
 export class CreateComponent {
   public title: string;
   public project: Project;
+  public save_project: any;
   public status: string = '';
   public filesToUpload: Array<File> = new Array<File>;
 
@@ -36,8 +38,8 @@ export class CreateComponent {
           // Subir Imagen
           this._uploadService.makeFileRequest(global.url+"upload-image/"+response.project._id, [], this.filesToUpload, 'image')
           .then((result: any) => {
+              this.save_project = result.project;
               this.status = 'success';
-              console.log()
               form.reset();
             })
         } else {

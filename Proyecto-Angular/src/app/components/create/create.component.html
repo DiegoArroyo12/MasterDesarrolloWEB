@@ -2,7 +2,7 @@
     <h2>{{title}}</h2>
 
     @if (status == 'success') {
-        <div class="message success">El proyecto se ha creado correctamente, puedes <a href="#">verlo aquí</a></div>
+        <div class="message success">El proyecto se ha creado correctamente, puedes <a [routerLink]="['/proyecto',save_project._id]">verlo aquí</a></div>
     }
     
     @if (status == 'failed') {
