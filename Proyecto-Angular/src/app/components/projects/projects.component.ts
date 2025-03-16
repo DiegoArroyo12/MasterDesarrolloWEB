@@ -13,10 +13,13 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class ProjectsComponent implements OnInit {
   public projects!: Project[];
+  public url: string;
 
   constructor(
     private _projectService: ProjectService
-  ){}
+  ){
+    this.url = global.url;
+  }
 
   ngOnInit(): void {
       this.getProjects();
