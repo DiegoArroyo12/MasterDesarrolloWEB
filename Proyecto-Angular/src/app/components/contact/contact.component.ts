@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class ContactComponent implements OnInit {
   public widthSlider!: number;
   public anchuraSlider!: any;
+  public autor: any;
 
   constructor() {}
 
@@ -25,5 +26,9 @@ export class ContactComponent implements OnInit {
 
   resetearSlider() {
     this.anchuraSlider = false;
+  }
+
+  getAutor(event: Event) {
+    this.autor = event;
   }
 }

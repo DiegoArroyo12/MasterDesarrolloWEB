@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-hijo',
@@ -9,4 +9,19 @@ import { Component, Input } from '@angular/core';
 export class HijoComponent {
 
   @Input() anchura!: number;
+  @Output() conseguirAutor = new EventEmitter();
+
+  public autor: any;
+
+  constructor() {
+    this.autor = {
+      nombre: "Diego Arroyo",
+      website: "https://diegoarroyo.netlify.app"
+    };
+  }
+
+  lanzar(event: any) {
+    console.log(event);
+    this.conseguirAutor.emit(this.autor);
+  }
 }
