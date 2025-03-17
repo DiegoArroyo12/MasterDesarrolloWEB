@@ -2,10 +2,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import $ from 'jquery';
 import { HijoComponent } from "../hijo/hijo.component";
 import { FormsModule } from '@angular/forms';
+import { ResaltadoDirective } from '../../resaltado.directive';
 
 @Component({
   selector: 'app-contact',
-  imports: [HijoComponent, FormsModule],
+  imports: [HijoComponent, FormsModule, ResaltadoDirective],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
