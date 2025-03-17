@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../../services/project.service';
 import { global } from '../../services/global';
-import { ActivatedRoute, Router, Params } from '@angular/router';
+import { ActivatedRoute, Router, Params, RouterModule } from '@angular/router';
 import { Project } from '../../models/project';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-detail',
-  imports: [HttpClientModule],
+  imports: [HttpClientModule, RouterModule],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.scss',
   providers: [ProjectService]
 })
 export class DetailComponent implements OnInit {
   public url: string;
-  public project: any;
+  public project!: Project;
 
   constructor(
     private _projectService: ProjectService,

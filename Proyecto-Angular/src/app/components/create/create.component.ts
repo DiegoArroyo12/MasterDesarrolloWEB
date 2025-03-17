@@ -21,6 +21,7 @@ export class CreateComponent {
   public save_project: any;
   public status: string = '';
   public filesToUpload: Array<File> = new Array<File>;
+  public url: string;
 
   constructor(
     private _projectService: ProjectService,
@@ -28,6 +29,7 @@ export class CreateComponent {
   ){
     this.title = "Crear Proyecto"
     this.project = new Project('','','','', 2025,'','')
+    this.url = global.url;
   }
 
   onSubmit(form: any){
