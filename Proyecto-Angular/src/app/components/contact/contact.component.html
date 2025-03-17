@@ -1,1 +1,14 @@
-<p>contact works!</p>
+<div class="container">
+    <h1>Contacto</h1>
+
+    Tamaño de la imagen: 
+    <input type="number" [(ngModel)]="widthSlider">
+    <button (click)="cargarSlider()">Cargar Slider</button>
+    <button (click)="resetearSlider()">Resetear Slider</button>
+    
+    @if (anchuraSlider) {
+        <div>
+            <app-hijo [anchura]="widthSlider"></app-hijo>
+        </div>
+    }
+</div>
