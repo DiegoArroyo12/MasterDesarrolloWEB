@@ -15,5 +15,19 @@ function render(data){
         `);
     }).join(' ');
 
-    document.getElementById('messages').innerHTML = html;
+    var divMsgs = document.getElementById('messages');
+    divMsgs.innerHTML = html;
+    divMsgs.scrollTop = divMsgs.scrollHeight;
+}
+
+function addMessage(e) {
+    var message = {
+        nickname: document.getElementById('nickname').value,
+        text: document.getElementById('text').value
+    };
+
+    document.getElementById('nickname').style.display = 'none';
+    socket.emit('add-message', message);
+
+    return false;
 }
